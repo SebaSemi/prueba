@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Cerveceria</title>
+
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.min2.css">
+    <link rel="stylesheet" href="css/swiper.min3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body>
+
+    <!-- CERVEZA CARGANDO -->
+    <div id="contenedor_carga">
+        <div class="mug">
+            <div class="ear"></div>
+            <div class="beer"></div>
+            <div class="shine"></div>
+            <div class="top">
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_general">
+        <!-- Header -->
+        <header class="header_class">
+
+            <!-- MENU DESPLEGABLE , LADO IZQUIERDO-->
+            <div class="headerDiv_1">
+                <a onclick="showMenu()" class="btn_menu_class">&#9776;</a>
+                <nav id="nav_id">
+                    <ul class="ul_class">
+                        <li class="li_class"><a href="" class="a_class">Home</a></li>
+                        <li class="li_class"><a href="" class="a_class">Contacto</a></li>
+                        <li class="li_class"><a href="" class="a_class">Nosotros</a></li>
+                        <li class="li_class"><a href="" class="a_class">UP to premium</a></li>
+                    </ul>
+                    <button onclick="closeMenu()" class="modal_closeMenu">&times;</button>
+                </nav>
+                <div class="logoDiv">
+                    <a href="slider.html" class="logo_a"><img src="img/letsdrink.png" alt=""></a>
+                </div>
+            </div>
+            <!-- LADO MEDIO, BOTON PREMIUM -->
+            <div class="headerDiv_2">
+                <div class="premiumDiv">
+                    <button onclick="showModal()" class="premium_a">UP to PREMIUM</button>
+                </div>
+            </div>
+
+            <!-- LADO DERECHO, INICIAR SESION -->
+            <div class="headerDiv_3">
+                <div class="iniciarDiv">
+                    <a href="signup.html" class="iniciar_a">Iniciar sesion</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- BOTONES -->
+        <section class="section_principal">
+            <article id="article_1">
+                <button class="a_article_class" onclick="">PROMOS</button>
+            </article>
+
+            <article id="article_2">
+                <button href="" class="a_article_class" onclick="">Boton</button>
+            </article>
+
+            <article id="article_3">
+                <button href="" class="a_article_class" onclick="beerCatalogue()">Nuestras Cervezas</button>
+            </article>
+
+            <article id="article_4">
+                <button href="" class="a_article_class" onclick="">OTROS</button>
+            </article>
+        </section>
+
+        <!-- MODAL PREMIUM -->
+        <aside id="modal">
+            <div id="modal_content">
+
+                <!-- <div class="s2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgs_modal">
+                                <img src="img/cheers.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgs_modal">
+                                <img src="img/two-men-in-a-bar-640x426.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgs_modal">
+                                <img src="img/Cheers-Scientists-Turn-Beer-into-Fuel-cover.jpg" alt="">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+               
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+
+                </div> -->
+
+                <div class="price">
+                    <h1>$560</h1>
+                    <h6>/por mes</h6>
+                </div>
+
+                <button onclick="closeModal()" class="modal_close">&times;</button>
+                <ul class="modal_ul">
+                    <p class="modal_p">Siendo Premium podras tener los mejores beneficios</p>
+                    <li class="modal_li">Descuentos únicos <a href="">(ver promos)</a></li>
+                    <li class="modal_li">Cada <strong>30 minutos</strong> puedes volver a usar una promo premium</li>
+                    <li class="modal_li">Haz tu pedido sin espera</li>
+                    <li class="modal_li">Paga menos disfrutando más</li>
+                </ul>
+
+                <input type="button" value="Adquirir Premium" class="btn-premium">
+                <input type="button" value="Ver más" class="btn-premium">
+
+            </div>
+        </aside>
+
+
+        <!-- SECCION 2, MENSAJE -->
+        <section id="section_2">
+            <div class="section_2_div">
+
+                <h2>Disfrutá con tus conocidos pagando menos</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            </div>
+        </section>
+
+
+        <!-- UBICACION -->
+        <section id="location">
+            <div class="sedes_div">
+                <h2>Nuestras Sedes</h2>
+            </div>
+
+            <!-- EL S1 CORRESPONDE AL SWIPER.MIN 2.CSS -->
+            <div class="s1">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="location_div">
+                            <h3>PALERMO</h3>
+                            <p>Direccion: Cabello 3200</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.8726777469633!2d-58.409011285053055!3d-34.58208806386047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57cd90852a7%3A0x7d5491d4ef35600d!2sCabello+3200%2C+C1425APF+CABA!5e0!3m2!1ses-419!2sar!4v1553461213388"
+                                width="250" height="200" frameborder="0" style="border:0; margin: .7em 0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location_div">
+                            <h3>V. DEVOTO</h3>
+                            <p>Direccion:Díaz Colodrero 2321</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.1795999830892!2d-58.4871341850533!3d-34.57432186344975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb66770428b4f%3A0x4f2ea00ebd08d596!2sD%C3%ADaz+Colodrero+2321%2C+C1431FLA+CABA!5e0!3m2!1ses-419!2sar!4v1553461348081"
+                                width="250" height="200" frameborder="0" style="border:0; margin: .7em 0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="location_div">
+                            <h3>CABALLITO</h3>
+                            <p>Direccion: Av. Pedro Goyena 1064</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1028439169677!2d-58.44473988505157!3d-34.62684126622834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca37af6f52b3%3A0x95a98d3c462d5fdb!2sAv.+Pedro+Goyena+1064%2C+C1424+CABA!5e0!3m2!1ses-419!2sar!4v1553461440745"
+                                width="250" height="200" frameborder="0" style="border:0; margin: .7em 0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="location_div">
+                            <h3>SAN TELMO</h3>
+                            <p>Direccion: Bolívar 491</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.629002238536!2d-58.37555568505199!3d-34.61354176552445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad5143f41d9%3A0x898e495cc033810!2sBol%C3%ADvar+491%2C+C1066AAI+CABA!5e0!3m2!1ses-419!2sar!4v1553461498035"
+                                width="250" height="200" frameborder="0" style="border:0; margin: .7em 0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+
+        </section>
+
+
+        <section id="contact">
+
+
+        </section>
+
+
+        <footer>
+            <p>© Copyright</p>
+        </footer>
+
+        <!-- MODAL "NUESTRAS CERVEZAS" -->
+        <div id="modalBeers">
+            <!-- SWIPER-CONTAINER CORRESPONDE A SWIPER.MIN.CSS -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Honey.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Honey</h3>
+                            <span>Es una cerveza suave y con un buen sabor a miel, ligeramente dulce.</span>
+                            <span>Graduacion Alcoholica: <strong>5%</strong></span>
+                            <span>¿La probaste? ¿Como calificarias esta cerveza?</span>
+                            <div id="starContainer">
+
+                                <span class="starGeneral" id="star1" onclick="score(1)" onmouseover="mouseOver(1)"
+                                    onmouseout="mouseOut(1)">&#9733;</span>
+                                <span class="starGeneral" id="star2" onclick="score(2)" onmouseover="mouseOver(2)"
+                                    onmouseout="mouseOut(2)">&#9733;</span>
+                                <span class="starGeneral" id="star3" onclick="score(3)" onmouseover="mouseOver(3)"
+                                    onmouseout="mouseOut(3)">&#9733;</span>
+                                <span class="starGeneral" id="star4" onclick="score(4)" onmouseover="mouseOver(4)"
+                                    onmouseout="mouseOut(4)">&#9733;</span>
+                                <span class="starGeneral" id="star5" onclick="score(5)" onmouseover="mouseOver(5)"
+                                    onmouseout="mouseOut(5)">&#9733;</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Ale.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Ale</h3>
+                            <span>Cerveza fuerte, con un gran gusto a gengibre</span>
+                            <span>Graduacion Alcoholica: <strong>7%</strong></span>
+                            <span>¿La probaste? ¿Como calificarias esta cerveza?</span>
+
+                            <div id="starContainer">
+
+                                <span class="starGeneral" id="star1" onclick="score(1)" onmouseover="mouseOver(1)"
+                                    onmouseout="mouseOut(1)">&#9733;</span>
+                                <span class="starGeneral" id="star2" onclick="score(2)" onmouseover="mouseOver(2)"
+                                    onmouseout="mouseOut(2)">&#9733;</span>
+                                <span class="starGeneral" id="star3" onclick="score(3)" onmouseover="mouseOver(3)"
+                                    onmouseout="mouseOut(3)">&#9733;</span>
+                                <span class="starGeneral" id="star4" onclick="score(4)" onmouseover="mouseOver(4)"
+                                    onmouseout="mouseOut(4)">&#9733;</span>
+                                <span class="starGeneral" id="star5" onclick="score(5)" onmouseover="mouseOver(5)"
+                                    onmouseout="mouseOut(5)">&#9733;</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Red-Irish.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Red-Irish</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Mild.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Mild</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/scotch.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Scotch</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Ale.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Ale</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Ale.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Ale</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Ale.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Ale</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="img/otherbeers/Ale.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Ale</h3>
+                            <span>Como va</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+
+
+            <button onclick="closeModalBeer()" class="modal_closeBeer">&times;</button>
+        </div>
+    </div>
+    <!-- Boton flotante del + -->
+    <div class="menu pmd-floating-action" role="navigation">
+        <a href="javascript:void(0);"
+            class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default"
+            data-title="Supervisor Account">
+            <span class="pmd-floating-hidden">Supervisor Account</span>
+            <i class="material-icons">supervisor_account</i>
+        </a>
+
+        <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary" data-title="Ver"
+            href="javascript:void(0)">
+            <span class="pmd-floating-hidden">Primary</span>
+            <i class="material-icons pmd-sm">add</i>
+        </a>
+    </div>
+
+    <script>
+        // CERVEZA CARGANDO
+        window.onload = function () {
+
+            var contenedor = document.getElementById('contenedor_carga')
+
+            contenedor.style.visibility = "hidden";
+            contenedor.style.opacity = '0';
+        }
+
+    </script>
+
+    
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

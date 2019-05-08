@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="text/javascript" src="cordova.js"></script>
+
+</head>
+
+<body class="signUp_body">
+    <div class="container_general">
+    
+            <ul id="userList">
+            
+                </ul>
+        
+
+        <form id="">
+
+            <aside class="modal_signUp">
+
+                <div id="modal_signUp_content">
+                    <p class="titleSignUp">Iniciar sesión</p>
+
+                    <input class="inputSignUp" id="email2" type="email" name="" placeholder="Correo electrónico"
+                        >
+                    <input class="inputSignUp" id="contrasena2" type="password" name="" placeholder="Contraseña"
+                        >
+                    <div id="forgotPass">
+                        <a href="" class="a_forgotPass">He olvidado mi nombre de usuario y/o contraseña</a>
+                    </div>
+
+                    <div class="div_btns_signUp">
+                        <!-- El primer boton registrar va a llevar a el modal de registrar -->
+                        <input type="button" value="Registrarse" id="createAccount" onclick="">
+                        <input type="button" value="Iniciar sesion" id="btnIngresar" onclick="ingreso()">
+                    </div>
+                        
+                    <h2>Crear usuario</h2>
+                        <input id="email" type="email" placeholder="Email">
+                        <input id="contrasena" type="password" placeholder="Contraseña">
+
+                        <input type="button" value="Registrarse" onclick="registrar()">
+
+                    <div id="contenido">
+                        
+                    </div>
+                    <div id="seeUsers">
+                        
+                    </div>
+ 
+                      
+                </div>
+            </aside>
+
+        </form>
+
+        
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <script>
+        
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBo3dmfGoHUzUmf41KZe_y-VCx695Gpy58",
+            authDomain: "cerveceriaproyecto-4b855.firebaseapp.com",
+            databaseURL: "https://cerveceriaproyecto-4b855.firebaseio.com",
+            projectId: "cerveceriaproyecto-4b855",
+            storageBucket: "cerveceriaproyecto-4b855.appspot.com",
+            messagingSenderId: "704927948942"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+
+
+    </script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

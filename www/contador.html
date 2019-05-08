@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+  <h2 id="countdown"></h2>
+  <input onclick="startClock()" class="button-primary" type="button" value="Start">
+  <input onclick="pauseClock()" class="button-primary" type="button" value="Pause">
+  <input onclick="resetClock()" class="button-primary" type="button" value="Reset"><br />
+
+  <input onclick="setTimer(60*60)" class="button-primary" type="button" value=" 1 Hour">
+  <input onclick="setTimer(30*60)" class="button-primary" type="button" value=" 30 Minutes">
+  
+  <span id="duration"></span> <span id="status"></span>
+
+    <script src="js/count.js"></script>
+</body>
+</html>

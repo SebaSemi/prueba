@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <header class="header_class">
+        
+        <div class="headerDiv_1">
+
+            <a onclick="showMenu()" class="btn_menu_class">&#9776;</a>
+
+            <nav id="nav_id">
+                <ul class="ul_class">
+                    <li class="li_class"><a href="" class="a_class">Home</a></li>
+                    <li class="li_class"><a href="" class="a_class">Contacto</a></li>
+                    <li class="li_class"><a href="" class="a_class">Nosotros</a></li>
+                    <li class="li_class"><a href="" class="a_class">UP to premium</a></li>
+                </ul>
+                <button onclick="closeMenu()" class="modal_closeMenu">&times;</button>
+            </nav>
+
+
+            <div class="logoDiv">
+                <a href="slider.html" class="logo_a"><img src="img/letsdrink.png" alt=""></a>
+            </div>
+
+        </div>
+
+
+        <div class="headerDiv_2">
+            <div id="contenido">
+
+            </div>
+            <div class="iniciarDiv">
+                    
+                <a href="" class="iniciar_a">Bienvenido Sebastian</a>
+            </div>
+ 
+        </div>
+
+    </header>
+
+    <div class="page">
+
+        <div class="subnavbar">
+            <!-- Searchbar with auto init -->
+            <form class="searchbar">
+                <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                        <input type="search" placeholder="Buscar usuario">
+                        <i class="searchbar-icon"></i>
+                        <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                </div>
+            </form>
+        </div>
+
+        <div class="page-content">
+            <!-- Searchbar backdrop -->
+            <div class="searchbar-backdrop"></div>
+            <!-- hide-on-search element -->
+            <div class="block searchbar-hide-on-search">
+                <p>This block will be hidden on search. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <!-- search target list -->
+            <div class="list searchbar-found">
+                <ul>
+                
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Acura</div>
+                            <div>
+                                <h2 id="countdown"></h2>
+                                <input onclick="startClock()" class="button-primary" type="button" value="Start">
+                                <input onclick="pauseClock()" class="button-primary" type="button" value="Pause">
+                                <input onclick="resetClock()" class="button-primary" type="button" value="Reset"><br />
+
+                                <input onclick="setTimer(60*60)" class="button-primary" type="button" value=" 1 Hour">
+                                <input onclick="setTimer(30*60)" class="button-primary" type="button"
+                                    value=" 30 Minutes">
+                                <span id="duration"></span> <span id="status"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Audi</div>
+                            <a>Activar premium</a>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">BMW</div>
+                            <a>Activar premium</a>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Volvo</div>
+                            <a>Activar premium</a>
+                        </div>
+                    </li>
+                    <div id="contenidoasd">
+                        <p></p>
+                    </div>
+                    
+
+                </ul>
+            </div>
+            <!-- Nothing found message -->
+            <div class="block searchbar-not-found">
+                <div class="block-inner">Nothing found</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <button class="btntraerinfo" onclick="traer()">Traer info</button>
+
+    <script src="js/framework7.bundle.min.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <script>
+        
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBo3dmfGoHUzUmf41KZe_y-VCx695Gpy58",
+            authDomain: "cerveceriaproyecto-4b855.firebaseapp.com",
+            databaseURL: "https://cerveceriaproyecto-4b855.firebaseio.com",
+            projectId: "cerveceriaproyecto-4b855",
+            storageBucket: "cerveceriaproyecto-4b855.appspot.com",
+            messagingSenderId: "704927948942"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+
+
+    </script>
+    <script>
+        var app = new Framework7();
+
+        // create searchbar
+        var searchbar = app.searchbar.create({
+            el: '.searchbar',
+            searchContainer: '.list',
+            searchIn: '.item-title',
+            on: {
+                search(sb, query, previousQuery) {
+                    console.log(query, previousQuery);
+                }
+            }
+        });
+    </script>
+
+    <!-- 
+        <section class="section-Users">
+            <div class="listUsers">
+                <h6 class="">Recent updates</h6>
+                <div class="itemUsers">
+                    <img src="" alt="" class="">
+                    <p class="border-users">
+                        <strong class="">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                        tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+                </div>
+                <div class="">
+                    <img src="" alt="" class="">
+                    <p class="border-users">
+                        <strong class="">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                        tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+                </div>
+                <div class="">
+                    <img src="" alt="" class="">
+                    <p class="border-users">
+                        <strong class="">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                        tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+                </div>
+
+                <small class="">
+                    <a href="#">All updates</a>
+                </small>
+            </div>
+
+        </section> -->
+
+
+    <script>
+        var contenido = document.querySelector('#contenidoasd');
+
+        function traer() {
+            fetch('texto.txt')
+                .then(data => data.text())
+                .then(data => {
+                    contenido.innerHTML = `${data}`
+
+                })
+        }
+
+    </script>
+
+
+    </script>
+
+    <script src="js/app2.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

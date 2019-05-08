@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body>
+    <div id="contenedor_carga">
+        <div class="mug">
+            <div class="ear"></div>
+            <div class="beer"></div>
+            <div class="shine"></div>
+            <div class="top">
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+                <div class="foam"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    window.onload = function() {
+
+            var contenedor=document.getElementById('contenedor_carga')
+            
+            contenedor.style.visibility = "hidden";
+            contenedor.style.opacity = '0';
+    }
+
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
